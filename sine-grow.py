@@ -23,7 +23,8 @@ line, = ax.plot(x, y)
 
 # This function is called every frame, with i as the frame number (starts at 0.)
 def update(i):
-    line.set_ydata(i / 50.0 * np.sin(x))
+    s = i / 50.0
+    line.set_ydata(s * np.sin(x))
         
 ani = an.FuncAnimation(fig, update, 50, interval=10)
 
